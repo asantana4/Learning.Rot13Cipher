@@ -1,6 +1,16 @@
-﻿Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("    Rot13 Cipher    ");
+Console.WriteLine();
 
-//What the progra does at a basic level:
+Console.Write("Type in the message to transform: ");
+string message = Console.ReadLine()?.Trim() ?? "";
 
-// 1.Write a message to the console.
-// 2. Show the encrypted of decrypted message using ROT13 cipher.
+Console.Write("Press 'T' transform the message. Press any other key to end the program.");
+string commandInput = Console.ReadLine()?.Trim() ?? "";
+
+if (commandInput.Contains("tT")) 
+{ 
+    
+}
+
+
+

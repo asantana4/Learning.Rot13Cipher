@@ -6,7 +6,7 @@ namespace Learning.Rot13Cipher
 {
     public class Rot13Cipher
     {
-        public string TransformMessage(string input)
+        public static string TransformMessage(string input)
         {
 
             if (string.IsNullOrEmpty(input))
