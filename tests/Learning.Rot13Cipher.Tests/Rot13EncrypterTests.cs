@@ -26,7 +26,7 @@ namespace Learning.Rot13Cipher.Tests
             // 2. ACT
             // Call the actual method being tested
             var encrypter = new Rot13Encrypter();
-            string actualString = encrypter.EncryptDecryptText(input);
+            string actualString = encrypter.ObfuscateText(input);
 
             // 3. ASSERT
             // Verify the output matches expectations
@@ -45,7 +45,7 @@ namespace Learning.Rot13Cipher.Tests
             // 2. ACTt
             // Call the actual method being tested
             var encrypter = new Rot13Encrypter();
-            string actualString = encrypter.EncryptDecryptText(input);
+            string actualString = encrypter.ObfuscateText(input);
 
 
             // 3. ASSERT
@@ -66,7 +66,7 @@ namespace Learning.Rot13Cipher.Tests
             // 2. ACTt
             // Call the actual method being tested
             var encrypter = new Rot13Encrypter();
-            string actualString = encrypter.EncryptDecryptText(input!);
+            string actualString = encrypter.ObfuscateText(input!);
 
 
             // 3. ASSERT

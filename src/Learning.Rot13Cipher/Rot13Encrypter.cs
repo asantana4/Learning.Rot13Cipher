@@ -6,7 +6,7 @@ namespace Learning.Rot13Cipher
 {
     public class Rot13Encrypter
     {
-        public string EncryptDecryptText(string input)
+        public string ObfuscateText(string input)
         {
 
             if (string.IsNullOrEmpty(input))
@@ -19,11 +19,11 @@ namespace Learning.Rot13Cipher
             {
                 int charIntValue = c;
                 
-                if ((c >= 97 && c <= 109) || (c >= 65 && c <= 77)) 
+                if ((c >= 'a' && c <= 'm') || (c >= 'A' && c <= 'M')) 
                 {
                     charIntValue += 13;
 
-                } else if ((c >= 110 && c <= 122) || (c >= 78 && c <= 90)) 
+                } else if ((c >= 'n' && c <= 'z') || (c >= 'N' && c <= 'Z')) 
                 {
                     charIntValue -= 13;
                 } 
