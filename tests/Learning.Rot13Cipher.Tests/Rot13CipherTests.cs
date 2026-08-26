@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Learning.Rot13Cipher.Tests
 {
-    public class Rot13EncrypterTests
+    public class Rot13CipherTests
     {
         [Theory]
         [InlineData("call", "pnyy")]
@@ -25,8 +25,8 @@ namespace Learning.Rot13Cipher.Tests
 
             // 2. ACT
             // Call the actual method being tested
-            var encrypter = new Rot13Encrypter();
-            string actualString = encrypter.ObfuscateText(input);
+            var encrypter = new Rot13Cipher();
+            string actualString = encrypter.TransformMessage(input);
 
             // 3. ASSERT
             // Verify the output matches expectations
@@ -44,8 +44,8 @@ namespace Learning.Rot13Cipher.Tests
 
             // 2. ACTt
             // Call the actual method being tested
-            var encrypter = new Rot13Encrypter();
-            string actualString = encrypter.ObfuscateText(input);
+            var encrypter = new Rot13Cipher();
+            string actualString = encrypter.TransformMessage(input);
 
 
             // 3. ASSERT
@@ -65,8 +65,8 @@ namespace Learning.Rot13Cipher.Tests
 
             // 2. ACTt
             // Call the actual method being tested
-            var encrypter = new Rot13Encrypter();
-            string actualString = encrypter.ObfuscateText(input!);
+            var encrypter = new Rot13Cipher();
+            string actualString = encrypter.TransformMessage(input!);
 
 
             // 3. ASSERT
