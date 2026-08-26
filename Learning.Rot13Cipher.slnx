@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/scr/">
+    <Project Path="src/Learning.Rot13Cipher/Learning.Rot13Cipher.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Learning.Rot13Cipher.Tests/Learning.Rot13Cipher.Tests.csproj" />
+  </Folder>
+</Solution>
