@@ -5,28 +5,30 @@ Console.WriteLine();
 
 Console.Write("Type in the message to transform: ");
 string message = Console.ReadLine()?.Trim() ?? "";
-Console.WriteLine("========================================");
-Console.WriteLine(message);
-Console.WriteLine("========================================");
+
 
 while (true)
 {
+    Console.Clear();
     Console.WriteLine("    Rot13 Cipher    ");
     Console.WriteLine();
+    Console.WriteLine("========================================");
+    Console.WriteLine(message);
+    Console.WriteLine("========================================");
+
+    
 
     Console.Write("Press 'T' to transform the message. Press any other key to end the program: ");
-    string commandInput = Console.ReadLine()?.Trim() ?? "";
-    Console.WriteLine();
+    ConsoleKeyInfo commandInput = Console.ReadKey(intercept: true);
+    
 
-    if ("tT".Contains(commandInput))
+    if (commandInput.Key == ConsoleKey.T)
     {
-        Console.WriteLine("========================================");
-        string transformedMessage = Rot13Cipher.TransformMessage(message);
-        Console.WriteLine(transformedMessage);
-        Console.WriteLine("========================================");
+        message = Rot13Cipher.TransformMessage(message);   
     }
     else
     {
+        Console.WriteLine("\nExiting program...");
         break;
     }
 }
