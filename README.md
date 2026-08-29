@@ -128,13 +128,23 @@ When you run the application, you are greeted with:
 ```
 Rot13 Cipher    
 
-Type in the message to transform: Hello, World!
+Type in the message to transform:
 ```
 
 #### First Transformation (Encoding):
 
-After pressing `Enter`, the screen clears and shows your original message. If you press `T`, the program updates 
-the screen with the cipher text:
+After typing in "Hello, World!" and pressing `Enter`, the screen clears and shows your original message:
+
+```
+Rot13 Cipher    
+
+========================================
+Hello, World!
+========================================
+Press 'T' to transform the message. Press any other key to end the program:
+```
+
+If you press `T`, the program updates the screen with the cipher text:
 
 ```
 Rot13 Cipher    
