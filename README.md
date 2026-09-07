@@ -31,7 +31,7 @@ Numbers, symbols, and whitespace are not shifted and remain unchanged.
 
 #### First half of the alphabet (A-M)
 
-A ↔ N
+A ↔ N 
 B ↔ O
 C ↔ P
 D ↔ Q
