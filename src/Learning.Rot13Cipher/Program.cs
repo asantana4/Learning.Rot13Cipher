@@ -22,7 +22,7 @@ while (true)
 
     if (commandInput.Key == ConsoleKey.T)
     {
-        message = Rot13Cipher.TransformMessage(message);   
+        message = Rot13Cipher.TransformMessage(message);
     }
     else
     {

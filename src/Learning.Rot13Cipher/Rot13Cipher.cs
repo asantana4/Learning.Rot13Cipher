@@ -1,39 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 
 namespace Learning.Rot13Cipher
 {
     public class Rot13Cipher
     {
+        private const int Offset = 13;
+        private const int AlphabetLength = 26;
+
         public static string TransformMessage(string input)
         {
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input), "Input to cipher cannot be null.");
+            }
 
-            if (string.IsNullOrEmpty(input))
+            if (input.Length == 0)
             {
                 return string.Empty;
             }
-
-            //StringBuilder finalMessage = new StringBuilder();
-            char[] rotChars = new char[input.Length];
+       
+            char[] resultCharacters = new char[input.Length];    
 
             for (int i = 0; i < input.Length; i++)
             {
-                int currChar = input[i];
+                char originalCharacter = input[i];
+                char finalCharacter = originalCharacter;           
 
-                if ((input[i] >= 'a' && input[i] <= 'm') || (input[i] >= 'A' && input[i] <= 'M')) 
+                if (isEnglishLetter(originalCharacter)) 
                 {
-                    currChar += 13;
-
-                } else if ((input[i] >= 'n' && input[i] <= 'z') || (input[i] >= 'N' && input[i] <= 'Z')) 
-                {
-                    currChar -= 13;
+                    char baseLetter = char.IsUpper(originalCharacter) ? 'A' : 'a';
+                    finalCharacter = (char)(((originalCharacter - baseLetter + Offset) % AlphabetLength) + baseLetter);
                 }
-
-                rotChars[i] = (char) currChar;
-
+               
+                resultCharacters[i] = finalCharacter;
             }
-            return new string(rotChars);
+
+            return new string(resultCharacters);
+        }
+
+        private static bool isEnglishLetter(char c)
+        {
+            return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
         }
 
     }
