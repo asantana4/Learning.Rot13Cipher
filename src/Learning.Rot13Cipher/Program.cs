@@ -1,6 +1,6 @@
 ﻿using Learning.Rot13Cipher;
 
-string message = "";
+string message = string.Empty;
 
 while (true)
 {
@@ -17,10 +17,21 @@ while (true)
     Console.WriteLine(message);
     Console.WriteLine("========================================");
 
-    Console.Write("Press 'T' to transform the message. Press any other key to end the program: ");
+    Console.Write("""
+
+        Press:
+        'T' to transform the current message
+        'N' to enter a new message to transform
+        Any other key to end the program
+        """);
     ConsoleKeyInfo commandInput = Console.ReadKey(intercept: true);
 
-    if (commandInput.Key == ConsoleKey.T)
+    if (commandInput.Key == ConsoleKey.N)       
+    {
+        message = string.Empty;
+        continue;
+    } 
+    else if (commandInput.Key == ConsoleKey.T)
     {
         message = Rot13Cipher.TransformMessage(message);
     }

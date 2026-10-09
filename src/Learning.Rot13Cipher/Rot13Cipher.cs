@@ -29,7 +29,7 @@ namespace Learning.Rot13Cipher
                 char originalCharacter = input[i];
                 char finalCharacter = originalCharacter;           
 
-                if (isEnglishLetter(originalCharacter)) 
+                if (IsEnglishLetter(originalCharacter)) 
                 {
                     char baseLetter = char.IsUpper(originalCharacter) ? 'A' : 'a';
                     finalCharacter = (char)(((originalCharacter - baseLetter + Offset) % AlphabetLength) + baseLetter);
@@ -41,7 +41,7 @@ namespace Learning.Rot13Cipher
             return new string(resultCharacters);
         }
 
-        private static bool isEnglishLetter(char c)
+        private static bool IsEnglishLetter(char c)
         {
             return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
         }
